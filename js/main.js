@@ -54,52 +54,33 @@ console.log(`${nome} pesando ${peso} kg è la bicicletta più legera`);
 
 const squadreDiCalcio = [
     {
-        "nome_squadra": "lazio",
-        "punti_fatti": 0,
-        "falli_subiti": 0
+        "nomeSquadra": "lazio",
+        "puntiFatti": 0,
+        "falliSubiti": 0
     },
     {
-        "nome_squadra": "roma",
-        "punti_fatti": 0,
-        "falli_subiti": 0
+        "nomeSquadra": "roma",
+        "puntiFatti": 0,
+        "falliSubiti": 0
     },
     {
-        "nome_squadra": "fiorentina",
-        "punti_fatti": 0,
-        "falli_subiti": 0
+        "nomeSquadra": "fiorentina",
+        "puntiFatti": 0,
+        "falliSubiti": 0
     }
 ];
 
 
-squadreDiCalcio.forEach((elemento) => {
+for (let i = 0; i < squadreDiCalcio.length; i++) {
+    squadreDiCalcio[i].puntiFatti = Math.floor(Math.random() * 100);
+    squadreDiCalcio[i].falliSubiti = Math.floor(Math.random() * 50);
+  }
 
-    elemento.punti_fatti = getNumeriCasualiUnici(1, 1, 30);
-    elemento.falli_subiti = getNumeriCasualiUnici(1, 1, 30);
-});
+ const squadreFalli = [];
 
-console.log(squadreDiCalcio);
-
-
-
-// let { nome_squadra, falli_subiti } = squadreDiCalcio;
-// console.log(`La ${nome_squadra} ha subito ${falli_subiti} falli`);
-
-
-
-
-
-
-
-function getNumeriCasualiUnici(numeroElementi, min, max) {
-
-    const numeri = [];
-
-    while (numeri.length < numeroElementi) {
-        const numeroCasuale = Math.floor(Math.random() * (max - min + 1)) + min;
-        if (!numeri.includes(numeroCasuale)) {
-            numeri.push(numeroCasuale);
-        }
-    }
-    return numeri;
-
+for (let i = 0; i < squadreDiCalcio.length; i++) {
+  const { nomeSquadra, falliSubiti } = squadreDiCalcio[i];
+  squadreFalli.push({ nomeSquadra, falliSubiti });
 }
+
+console.log("Squadre e falli subiti:", squadreFalli);
