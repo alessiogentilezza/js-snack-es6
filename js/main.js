@@ -70,19 +70,19 @@ const squadreDiCalcio = [
     }
 ];
 
+
 squadreDiCalcio.forEach((elemento) => {
 
-    if (elemento.punti_fatti == 0) {
-        elemento.punti_fatti = getNumeriCasualiUnici(1, 1, 100);
-    } else if (elemento.falli_subiti == 0) {
-        elemento.falli_subiti = getNumeriCasualiUnici(1, 1, 100);
-    }
+    elemento.punti_fatti = getNumeriCasualiUnici(1, 1, 30);
+    elemento.falli_subiti = getNumeriCasualiUnici(1, 1, 30);
 });
 
 console.log(squadreDiCalcio);
 
-let { nome_squadra, falli_subiti } = squadreDiCalcio;
-console.log(`La ${nome_squadra} ha subito ${falli_subiti} falli`);
+
+
+// let { nome_squadra, falli_subiti } = squadreDiCalcio;
+// console.log(`La ${nome_squadra} ha subito ${falli_subiti} falli`);
 
 
 
