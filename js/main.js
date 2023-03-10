@@ -31,17 +31,16 @@ const biciclettaDaCorsa = [
     }
 ];
 
-
-
-const etaMinore = [];
+let biciLeggera = biciclettaDaCorsa[0];
 
 biciclettaDaCorsa.forEach((elemento) => {
-    console.log(`${elemento.peso}`);
 
-    if (elemento.peso < ) {
-        etaMinore.push(`${elemento.peso}`);
-
+    if (elemento.peso < biciLeggera.peso) {
+        biciLeggera = elemento;
     }
 });
 
-console.log(etaMinore);
+console.log(biciLeggera);
+
+let { nome, peso } = biciLeggera;
+console.log(`${nome} pesando ${peso} kg è la bicicletta più legera`);
