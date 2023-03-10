@@ -31,7 +31,17 @@ const biciclettaDaCorsa = [
     }
 ];
 
-biciclettaDaCorsa.forEach((element)=>{
-    console.log(`${element.peso}`);
 
+
+const etaMinore = [];
+
+biciclettaDaCorsa.forEach((elemento) => {
+    console.log(`${elemento.peso}`);
+
+    if (elemento.peso < ) {
+        etaMinore.push(`${elemento.peso}`);
+
+    }
 });
+
+console.log(etaMinore);
