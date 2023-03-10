@@ -31,8 +31,7 @@ const biciclettaDaCorsa = [
     }
 ];
 
-console.log(biciclettaDaCorsa);
+biciclettaDaCorsa.forEach((element)=>{
+    console.log(`${element.peso}`);
 
-const {peso} = biciclettaDaCorsa;
-console.log(peso);
-
+});
