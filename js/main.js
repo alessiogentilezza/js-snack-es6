@@ -44,8 +44,6 @@ biciclettaDaCorsa.forEach((elemento) => {
     }
 });
 
-console.log(biciLeggera);
-
 let { nome, peso } = biciLeggera;
 console.log(`${nome} pesando ${peso} kg è la bicicletta più legera`);
 
@@ -74,13 +72,9 @@ const squadreDiCalcio = [
 for (let i = 0; i < squadreDiCalcio.length; i++) {
     squadreDiCalcio[i].puntiFatti = Math.floor(Math.random() * 100);
     squadreDiCalcio[i].falliSubiti = Math.floor(Math.random() * 50);
-  }
-
- const squadreFalli = [];
-
-for (let i = 0; i < squadreDiCalcio.length; i++) {
-  const { nomeSquadra, falliSubiti } = squadreDiCalcio[i];
-  squadreFalli.push({ nomeSquadra, falliSubiti });
 }
 
-console.log("Squadre e falli subiti:", squadreFalli);
+const squadreFalli = squadreDiCalcio.map(({ nomeSquadra, falliSubiti }) => {
+    console.log(nomeSquadra, falliSubiti);
+});
+
